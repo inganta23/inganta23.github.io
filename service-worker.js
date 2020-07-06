@@ -246,7 +246,7 @@ workbox.routing.registerRoute(
 
 
 
-//siapkan dulu service worker untuk menerima datanya
+//Response Push Notification
 self.addEventListener('push', function (event) {
     var body;
     if (event.data) {
