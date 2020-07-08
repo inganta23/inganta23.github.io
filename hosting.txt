@@ -1,2 +1,0 @@
-Firebase Hosting : https://jon-football-information.web.app/index.html
-Github Pages     : https://github.com/inganta23/inganta23.github.io

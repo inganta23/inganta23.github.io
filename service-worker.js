@@ -1,4 +1,4 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
 
 if (workbox) {
@@ -25,88 +25,9 @@ workbox.precaching.precacheAndRoute([{
     {
         url: '/article.html',
         revision: '1'
-    },
-     {
-        url: '/article.html?id=57&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=58&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=61&saved=true',
-        revision: '1'
-    },
-     {
-        url: '/article.html?id=62&saved=true',
-        revision: '1'
-    },
-     {
-        url: '/article.html?id=64&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=65&saved=true',
-        revision: '1'
-    },
-      {
-        url: '/article.html?id=66&saved=true',
-        revision: '1'
-    },
-      {
-        url: '/article.html?id=67&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=68&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=73&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=76&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=328&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=338&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=340&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=346&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=354&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=356&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=397&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=563&saved=true',
-        revision: '1'
-    },
-    {
-        url: '/article.html?id=1044&saved=true',
-        revision: '1'
-    },
-    {
+    }
+    ,
+    { 
         url: '/manifest.json',
         revision: '1'
     },
@@ -128,6 +49,10 @@ workbox.precaching.precacheAndRoute([{
     },
     {
         url: '/css/materialize.min.css',
+        revision: '1'
+    },
+    {
+        url: '/css/style.css',
         revision: '1'
     },
     {
@@ -203,7 +128,10 @@ workbox.precaching.precacheAndRoute([{
         revision: '1'
     }
   
-]);
+], {
+    // Ignore all URL parameters.
+    ignoreURLParametersMatching: [/.*/]
+  });
 
 workbox.routing.registerRoute(
     /\.(?:png|gif|jpg|jpeg|svg)$/,
